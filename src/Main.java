@@ -85,10 +85,11 @@ public class Main {
         inotator1.seOdihneste();
         maratonist1.seOdihneste();
 
-
-
-
-
-
+        SmartphoneIOS apple = new SmartphoneIOS();
+        SmartphoneAndroid samsung = new SmartphoneAndroid();
+        apple.porneste();
+        samsung.porneste();
+        apple.seOpreste();
+        samsung.seOpreste();
     }
 }
