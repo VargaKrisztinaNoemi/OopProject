@@ -3,24 +3,24 @@ public class Animal {
     String nume;
     String culoare;
     boolean vegetarian;
-
     int nrPicioare;
+    private String undeTraieste;
 
-    public void mananca(){
+    public void mananca() {
         System.out.println(nume + " mananca");
     }
 
-    public void doarme(){
+    public void doarme() {
         System.out.println(nume + " doarme");
     }
 
-    public String afiseaza(){
+    public String afiseaza() {
         String concatenated = nume + " are culoarea " + culoare;
         System.out.println(concatenated);
         return concatenated;
     }
 
-    public void afiseazaNrPicioare(){
+    public void afiseazaNrPicioare() {
         if (this.nrPicioare == 0) {
             System.out.println(this.nume + " nu are picioare");
         } else if (this.nrPicioare == 2) {
@@ -54,4 +54,15 @@ public class Animal {
         this.nrPicioare = nrPicioare;
     }
 
+    public void getUndeTraieste() {
+        System.out.println(this.nume + " traieste " + this.undeTraieste);
+    }
+
+    public void setUndeTraieste(String undeTraieste) {
+        if (undeTraieste == "in apa") {
+            this.undeTraieste = undeTraieste;
+        } else if (undeTraieste == "pe uscat") {
+            this.undeTraieste = undeTraieste;
+        }
+    }
 }
