@@ -4,6 +4,8 @@ public class Animal {
     String culoare;
     boolean vegetarian;
 
+    int nrPicioare;
+
     public void mananca(){
         System.out.println(nume + " mananca");
     }
@@ -18,9 +20,21 @@ public class Animal {
         return concatenated;
     }
 
+    public void afiseazaNrPicioare(){
+        if (this.nrPicioare == 0) {
+            System.out.println(this.nume + " nu are picioare");
+        } else if (this.nrPicioare == 2) {
+            System.out.println(this.nume + " are 2 picioare");
+        } else if (this.nrPicioare == 4) {
+            System.out.println(this.nume + " are 4 picioare");
+        } else {
+            System.out.println(this.nume + " are alt numar de picioare");
+        }
+    }
+
     public Animal() {
         this.nume = "unknown";
-        this.culoare = "unknown";
+        this.culoare = "grey";
         this.vegetarian = false;
     }
 
@@ -33,10 +47,11 @@ public class Animal {
         this.culoare = culoare;
     }
 
-    public Animal(String nume, String culoare, boolean vegetarian) {
+    public Animal(String nume, String culoare, boolean vegetarian, int nrPicioare) {
         this.nume = nume;
         this.culoare = culoare;
         this.vegetarian = vegetarian;
+        this.nrPicioare = nrPicioare;
     }
 
 }
